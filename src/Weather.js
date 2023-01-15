@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
-//import 'bootstrap/dist/css/bootstrap.css';
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -19,16 +18,16 @@ export default function Weather(props) {
         icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
         wind: response.data.wind.speed,
         city: response.data.name,
-    });
+        });
     }
 
     function handleSubmit(event) {
-    event.preventDefault();
-    search();
+        event.preventDefault();
+        search();
     }
 
     function handleCityChange(event) {
-    setCity(event.target.value);
+        setCity(event.target.value);
     }
 
     function search() {
@@ -40,29 +39,23 @@ export default function Weather(props) {
     if (weatherData.ready) {
     return (
         <div className="Weather">
-            <form id="search-form" class="mb-3" onSubmit={handleSubmit}>
-                <div class="row">
-                    <div class="col-8">
-                        <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Search the city"
-                            autoComplete="off"
-                            autoFocus="on"
-                            id="city-input"
-                            onChange={handleCityChange}
-                        />
-                    </div>
-                    <div className="col-2">
-                        <button type="submit" className="button">Search</button>
-                    </div>
-                </div>
+            <form id="search-form" className="row" onSubmit={handleSubmit}>
+                <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Search the city"
+                    autoComplete="off"
+                    autoFocus="on"
+                    id="city-input"
+                    onChange={handleCityChange}
+                /> 
+                <button type="submit" className="button">Search</button>
             </form>
             <WeatherInfo data={weatherData} defaultCity="Amsterdam" />
         </div>
         );
     } else {
-    search();
-    return "Loading...";
+        search();
+        return "Loading...";
     }
 }

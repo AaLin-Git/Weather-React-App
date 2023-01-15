@@ -9,17 +9,11 @@ export default function WeatherInfo(props) {
             <div class="container">
                 <div class="card">
                     <div class="card-body">
-
                     <h1 class="h1">{props.data.city}</h1>
-
-                    <div class="row current">
-                        <div class="col-3 icon">
-                            <img src={props.data.icon} alt="icon"/>
-                        </div>
-                        <div class="col-4 right-col">
-                            <div class="temperature-block">
-                                <WeatherTemperature celsius={props.data.temperature} />
-                            </div>
+                    <div class="current">
+                        <img src={props.data.icon} alt="icon"/>
+                        <div class="temperature-block">
+                            <WeatherTemperature celsius={props.data.temperature} />
                         </div>
                         <div class="col-5 day">
                             <FormattedDate date={props.data.date} />
