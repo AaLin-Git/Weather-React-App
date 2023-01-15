@@ -1,0 +1,85 @@
+span a {
+  top: 0;
+  font-size: 15px;
+  color: #00aaa0;
+  text-decoration: none;
+}
+
+div .row {
+  padding: 0;
+}
+
+
+.GitHub-link {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Cabin Sketch", cursive;
+}
+
+p a {
+  color: #00aaa0;
+}
+
+
+
+.card-body .h1 {
+  font-size: 57px;
+  text-align: center;
+  color: #907fa4;
+  padding-top: 28px;
+}
+
+.weather-forecast-date {
+  color: #00aaa0;
+}
+
+.card {
+  display: block;
+  margin: 0 auto;
+  width: 700px;
+  font-family: "Cabin Sketch", cursive;
+}
+
+.card-body {
+  background: #8ed2c9;
+  border: none;
+  padding: 0;
+}
+
+.current {
+  text-align: left;
+  margin: 10px;
+  color: #fcf4d9;
+}
+
+#time {
+  font-size: 30px;
+}
+
+#current-date {
+  font-size: 20px;
+}
+
+.day {
+  font-size: 14px;
+}
+
+.temperature-block {
+  font-size: 75px;
+}
+
+.temperature-block .units {
+  position: relative;
+  top: -16px;
+}
+
+.units a:hover {
+  color: #ffe693;
+}
+
+.container {
+    padding: 0;
+    margin: 0;
+}
+
